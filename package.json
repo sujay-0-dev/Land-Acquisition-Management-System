@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "@turf/buffer": "^7.4.0",
+    "ol": "^10.10.0"
+  }
+}
