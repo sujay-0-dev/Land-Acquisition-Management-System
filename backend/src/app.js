@@ -12,6 +12,9 @@ import { swaggerSpec } from './config/swagger.js';
 
 export const app = express();
 
+// Trust reverse proxy (Render/Heroku) for rate limiting
+app.set('trust proxy', 1);
+
 app.get('/api-docs/swagger.json', (req, res) => res.json(swaggerSpec));
 app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(null, { 
     customSiteTitle: "BHOOMISETU API Docs",
